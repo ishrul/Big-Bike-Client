@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.Primary-Button {
+  background-color: #12cbb5;
+  padding: 10px 60px;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 30px 0px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

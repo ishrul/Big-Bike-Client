@@ -1,0 +1,6 @@
+.bike-card {
+  height: 70vh !important;
+  width: 18rem;
+  margin-bottom: 20px;
+  transition: 0.5s !important;
+}
