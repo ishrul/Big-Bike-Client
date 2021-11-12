@@ -13,7 +13,7 @@ const Bikes = () => {
 
   return (
     <Container>
-      <h2>Bikes</h2>
+      <h2 className="text-info my-5">Choose Your Favourite Bike</h2>
       <Row style={{ marginLeft: "20px" }}>
         {bikes.map((bike) => (
           <Bike key={bike.name} bike={bike} />

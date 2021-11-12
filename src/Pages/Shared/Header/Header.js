@@ -6,7 +6,6 @@ import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
   const { user, logOut } = useAuth();
-  console.log(user);
   return (
     <div>
       <Navbar
@@ -46,6 +45,20 @@ const Header = () => {
               Home
             </NavLink>
 
+            {user.email && (
+              <NavLink
+                to="/dashboard"
+                activeStyle={{
+                  color: "#12CBB5",
+                  padding: "5px",
+                  borderBottom: "2px solid #12CBB5 ",
+                  borderRadius: "10px",
+                }}
+                className="ms-3 text-decoration-none"
+              >
+                Dashboard
+              </NavLink>
+            )}
             {user.email ? (
               <button
                 onClick={logOut}

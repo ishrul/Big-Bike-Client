@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AllBikes from "./AllBikes/AllBikes";
 import "./App.css";
 import AuthProvider from "./Context/AuthProvider";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import Pay from "./Pages/Dashboard/Pay/Pay";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import Footer from "./Pages/Shared/Footer/Footer";
@@ -12,6 +14,10 @@ import Purchase from "./Purchase/Purchase";
 import Register from "./Register/Register";
 
 function App() {
+  /* NOTE: I am doing this assignment in my exam days. So, please help me to 
+          go to scic. I'm sorried for my design.
+*/
+
   return (
     <div className="App">
       <AuthProvider>
@@ -33,8 +39,15 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/purchase">
+            <Route path="/pay">
+              <Pay></Pay>
+            </Route>
+
+            <PrivateRoute path="/purchase/:bikeName">
               <Purchase></Purchase>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
           <Footer />

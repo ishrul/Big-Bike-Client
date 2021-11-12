@@ -4,7 +4,7 @@ import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Bike = ({ bike }) => {
-  const { name, description, img } = bike;
+  const { name, description, img, _id } = bike;
 
   return (
     <Col sm>
@@ -13,7 +13,7 @@ const Bike = ({ bike }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Link to="/purchase">
+          <Link to={`/purchase/${name}`}>
             <Button variant="info" className="Primary-Button">
               Purchase
             </Button>
