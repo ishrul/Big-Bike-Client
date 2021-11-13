@@ -45,7 +45,7 @@ const Dashboard = () => {
           backgroundColor: "#12CBB5",
         }}
       >
-        Dashboard {">>>"}
+        Open Dashboard {">>>"}
       </Button>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>

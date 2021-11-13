@@ -8,7 +8,7 @@ const MakeAdmin = () => {
   const onSubmit = (details) => {
     console.log(details);
 
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://cryptic-caverns-37917.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -6,13 +6,15 @@ import { useForm } from "react-hook-form";
 const AddAProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/allBikes", data).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Successfully Added");
-        reset();
-      }
-    });
+    axios
+      .post("https://cryptic-caverns-37917.herokuapp.com/allBikes", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Successfully Added");
+          reset();
+        }
+      });
   };
 
   return (

@@ -6,7 +6,7 @@ const AllBikes = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allBikes")
+    fetch("https://cryptic-caverns-37917.herokuapp.com/allBikes")
       .then((res) => res.json())
       .then((data) => setBikes(data));
   }, []);

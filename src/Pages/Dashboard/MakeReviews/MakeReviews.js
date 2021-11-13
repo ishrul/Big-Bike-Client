@@ -15,13 +15,15 @@ const MakeReviews = () => {
 
   const onSubmit = (details) => {
     console.log(details);
-    axios.post("http://localhost:5000/reviews", details).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Successfully Added Your Review");
-        reset();
-      }
-    });
+    axios
+      .post("https://cryptic-caverns-37917.herokuapp.com/reviews", details)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Successfully Added Your Review");
+          reset();
+        }
+      });
   };
 
   return (

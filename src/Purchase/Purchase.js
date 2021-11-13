@@ -23,13 +23,15 @@ const Purchase = () => {
     setOrder(details);
     console.log(order);
 
-    axios.post("http://localhost:5000/myOrder", details).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Successfully Added To Your orders");
-        reset();
-      }
-    });
+    axios
+      .post("https://cryptic-caverns-37917.herokuapp.com/myOrder", details)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Successfully Added To Your orders");
+          reset();
+        }
+      });
   };
 
   return (

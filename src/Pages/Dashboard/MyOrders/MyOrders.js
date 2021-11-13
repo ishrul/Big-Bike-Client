@@ -8,18 +8,20 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(
+      `https://cryptic-caverns-37917.herokuapp.com/orders?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
       });
-  }, []);
+  }, [user.email]);
 
   //   deleting an order
   const handleDeleteAnOrder = (id) => {
     const proceed = window.confirm("Are You Sure, You Want To Delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://cryptic-caverns-37917.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
