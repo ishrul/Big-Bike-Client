@@ -1,0 +1,13 @@
+.new-service input,
+textarea {
+  width: 50vh;
+  border-radius: 10px;
+  padding-left: 5px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .new-service input,
+  textarea {
+    width: 80%;
+  }
+}

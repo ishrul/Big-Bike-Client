@@ -45,7 +45,7 @@ const MyOrders = () => {
         <h3 className="text-info my-5">Your Orders</h3>
         <Row>
           {orders.map((order) => (
-            <Col xs={12} md={3}>
+            <Col xs={12} md={3} className="my-3">
               <Card>
                 <Card.Header as="h5">{order.BikeName}</Card.Header>
                 <Card.Body>

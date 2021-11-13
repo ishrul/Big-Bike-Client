@@ -39,10 +39,6 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/pay">
-              <Pay></Pay>
-            </Route>
-
             <PrivateRoute path="/purchase/:bikeName">
               <Purchase></Purchase>
             </PrivateRoute>

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Form, Spinner } from "react-bootstrap";
 import { Google } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 const Register = () => {
+  const history = useHistory();
   const {
     createAccountWithGoogle,
     error,
@@ -13,6 +14,7 @@ const Register = () => {
     setUser,
     setUserName,
     isLoading,
+    saveUser,
   } = useAuth();
 
   const [email, setEmail] = useState("");
@@ -40,8 +42,10 @@ const Register = () => {
         console.log(user);
         setUser(user);
         setUserName(name);
+        saveUser(email, name);
         setError("");
         alert("Successfully Registered");
+        history.push("/home");
         window.location.reload(true);
       })
       .catch((error) => {

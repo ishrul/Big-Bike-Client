@@ -33,6 +33,7 @@ const Login = () => {
         setUser(user);
         alert("Successfully Loggin.");
         history.push(redirect_uri);
+
         // ...
       })
       .catch((error) => {
